@@ -22,8 +22,15 @@ export default function SevenInNinety(props){
             </div>
         )
     }
+    async function makeListItems(){
+        let url = "https://script.googleusercontent.com/macros/echo?user_content_key=ly3CsOTmGCJQvImd8WHNbpq_Bg5cY6VCZhoaR1vZhhWpJW3WEsMcd7YXQx0wNVmGTsBsXuvUNPxzHt9DAgt1cq7T2SymXsJCm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAguqLde5pmygIkE0pavsjrA8ckO-gKnQFHwM8KfyaPSbgjQ1k9uhRLjQPumTw2h1pScRvalJCHT3s3Hk23mHyggaIhVygfd6dz9Jw9Md8uu&lib=MC3Ya_pQwg8xbMDNU717AkI3kkJYbCxHf";
+        let data = await fetch(url);
+        console.log(data.body);
+        
+    }
     return (
     <div className={style.frame}>
+        {makeListItems()}
         <h1>7n90</h1> 
         <div className={style.list}> 
             <div className={style.item}>
